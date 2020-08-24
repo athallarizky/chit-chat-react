@@ -18,7 +18,7 @@ export default function ProfileBox(props) {
       <Image
         borderRadius="full"
         size="100px"
-        src={userState.photo}
+        src={userState.photo !== "-" ? userState.photo : "/koceng.jpg"}
         alt="Segun Datebayo"
         mb="15px"
       />

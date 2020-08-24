@@ -19,6 +19,9 @@ export default {
         red:{
             900:"red",
             400:"#F56565"
+        },
+        white:{
+          500:"#ffe2f1"
         }
     },
     fonts: {

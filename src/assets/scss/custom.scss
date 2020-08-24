@@ -1,3 +1,38 @@
 html, body{
     background:"red" !important;
 }
+
+
+.image-upload{
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    margin: 0 10px;
+    
+    cursor: pointer;
+}
+.image-upload > input
+{
+    display: none;
+    background:red !important;
+}
+
+.image-upload img
+{
+    width: 80px;
+    cursor: pointer;
+}
+.icon-upload, .icon-edit-upload{
+    padding: 8px;
+    
+    border-radius: 5px;
+}
+
+.icon-upload{
+    margin-right: 5px;
+    border: 1px solid #FF5A5F;
+}
+
+.icon-edit-upload{
+    border: 1px solid #FFF;
+}

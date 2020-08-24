@@ -10,11 +10,13 @@ import {
 } from '@chakra-ui/core'
 import { logoutUser } from 'store/actions/auth-actions'
 
-export default function LogoutButton() {
+export default function LogoutButton(props) {
   const dispatch = useDispatch()
   const currentState = useSelector( (state) => state.auth)
-  const logout = () => {
-    dispatch(logoutUser())
+  console.log('currentState.isAuthenticated', currentState.isAuthenticated)
+  const logout = async () => {
+    await dispatch(logoutUser())
+    window.location.reload()
   }
     return (
         <ButtonGroup>

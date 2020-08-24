@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Redirect } from 'react-router';
 import { useDispatch, useSelector } from "react-redux";
 import { loginData } from "store/actions/auth-actions";
 import {
@@ -21,6 +22,9 @@ export default function Login(props) {
   const dispatch = useDispatch();
   const currentState = useSelector((state) => state.auth);
   const [error, setError] = useState("");
+  useEffect(() => {
+    if (currentState.isAuthenticated) props.history.push("/");
+  }, []);
   const formik = useFormik({
     initialValues: {
       usermail: "",
@@ -30,7 +34,7 @@ export default function Login(props) {
       dispatch(loginData(values)).then((res) => {
         console.log("res", res);
         if (res.data.success) {
-          props.history.push("/");
+          window.location.href = "/"
         } else {
           const { data } = res;
           setError(data.message);
