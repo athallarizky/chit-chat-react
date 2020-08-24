@@ -54,12 +54,6 @@ class Home extends Component {
               <Box mb="15px" display="flex" flexDirection="column-reverse">
                 <StatusBox postList={posts} />
               </Box>
-              {/* <Box mb="15px">
-                <StatusBox />
-              </Box>
-              <Box mb="15px">
-                <StatusBox />
-              </Box> */}
             </Box>
           </Box>
         </Box>

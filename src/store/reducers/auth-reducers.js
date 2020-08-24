@@ -15,8 +15,7 @@ const initialState = {
   photo: user !== null ? user.foto : "",
   token: user !== null ? user.token : "",
   isLoading: false,
-  isAuthenticated: user !== null ? true : false,
-
+  isAuthenticated: localStorage.getItem("user") !== null ? true : false,
 };
 
 const AuthReducers = (state = initialState, action) => {
